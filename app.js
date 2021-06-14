@@ -86,7 +86,7 @@ app.use(function(err, req, res, next) {
 
 
 app.listen(8888,function(){
-  console.log('server start in http://127.0.0.1:8888');
+  console.log('server start in http://127.0.0.1:3000');
 });
 
 module.exports = app;
