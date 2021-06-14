@@ -6,7 +6,7 @@ dbOption = {
   user: 'root',
   password: 'admin123',
   port: '3306',
-  database: 'blog'
+  database: 'myblog'
 }
 
 module.exports = dbOption

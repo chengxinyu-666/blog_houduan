@@ -28,6 +28,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
+
+
 // 使用expressJwt拦截token
 app.use(expressJWT({
   // 解密 密钥
@@ -35,7 +39,8 @@ app.use(expressJWT({
   algorithms: ["HS256"]
  }).unless({
   path: [
-    '/api/article/detail',
+    '/',
+  '/api/article/detail',
   '/api/users/login',
   '/api/users/register',
   '/api/article/allList',
@@ -48,15 +53,20 @@ app.use(expressJWT({
 ] //⽩名单,除了这⾥写的地址，其 他的URL都需要验证
  }));
 
+
+
 // 拼接请求地址的中间件
 app.use('/api/article', articleRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/comment', commentRouter);
 
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+
 
 // error handler 错误中间件
 app.use(function(err, req, res, next) {
@@ -74,8 +84,9 @@ app.use(function(err, req, res, next) {
    }
 });
 
-app.listen(3000,function(){
-  console.log('server start in http://127.0.0.1:3000');
+
+app.listen(8888,function(){
+  console.log('server start in http://127.0.0.1:8888');
 });
 
 module.exports = app;
