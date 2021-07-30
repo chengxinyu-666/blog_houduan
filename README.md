@@ -23,7 +23,7 @@ $ npm run serve
 
 ```
 $后端
-$ git clone https://gitee.com/huang-rijian/node-personal-blog-system.git
+$ git clone https://gitee.com/huang-rijian/node-blog-system
 $ cd node-personal-blog-system
 $ npm install
 
